@@ -4,8 +4,23 @@
         <title>
             Pickle Clicker
         </title>
+        <style>
+            #clicks{
+                color:green;
+                font-family: 'Titillium Web', sans-serif;
+                text-align: center;
+            }
+        </style>
     </head>
     <body>
-        <img src="/images/BasicPickle.png">
+        <img src="/images/BasicPickle.png" onclick="onClick()">
+        <script>
+            var clix = 0;
+            function onClick(){
+                clix += 1;
+                document.getElementById("clicks").innerHTML = clix;
+            }
+        </script>
+        <h1 id="clicks">0</h1>
     </body>
 </html>
